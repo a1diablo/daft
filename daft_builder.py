@@ -2,8 +2,8 @@ from daftlistings import Daft, RentType
 import os
 
 daft = Daft()
-daft.set_listing_type(RentType.ANY)
-listings = daft.search()
+daft.set_listing_type(RentType.APARTMENT_TO_SHARE)
+listings = daft.search(fetch_all=False)
 
 os.remove('dataset.csv')
 with open('dataset.csv', 'a+', encoding='utf-8') as f:
